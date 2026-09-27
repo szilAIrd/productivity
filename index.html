@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productivity Mastery — Science-Backed Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0d0e;
+  --surface:#161618;
+  --surface2:#1e1e21;
+  --border:#2a2a2e;
+  --border2:#363639;
+  --text:#e8e6e0;
+  --text2:#9d9b95;
+  --text3:#5c5a56;
+  --accent:#d4922a;
+  --accent-light:#f2b347;
+  --accent-dim:#2a1f0a;
+  --teal:#2ea89c;
+  --teal-dim:#0a2220;
+  --blue:#4a8fd4;
+  --blue-dim:#0d1e30;
+  --green:#5c9e52;
+  --green-dim:#111f0f;
+  --red:#c4504a;
+  --red-dim:#240f0e;
+  --purple:#8b65d4;
+  --purple-dim:#1a1230;
+  --r:8px;
+  --r2:12px;
+  --font:'Geist',sans-serif;
+  --font-display:'Fraunces',serif;
+  --font-mono:'Geist Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.7;display:flex;min-height:100vh}
+
+/* SIDEBAR */
+#sidebar{width:240px;min-width:240px;background:var(--surface);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;padding:0 0 2rem;z-index:100}
+.sidebar-logo{padding:1.5rem 1.25rem 1rem;border-bottom:1px solid var(--border)}
+.sidebar-logo h1{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--accent-light);line-height:1.3;font-style:italic}
+.sidebar-logo p{font-size:11px;color:var(--text3);margin-top:3px;font-family:var(--font-mono);letter-spacing:.05em}
+.nav-section{padding:.75rem 1.25rem .25rem;font-size:10px;font-weight:500;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;font-family:var(--font-mono)}
+.nav-link{display:flex;align-items:center;gap:8px;padding:.45rem 1.25rem;font-size:13px;color:var(--text2);text-decoration:none;transition:all .15s;cursor:pointer;border-left:2px solid transparent}
+.nav-link:hover{color:var(--text);background:var(--surface2)}
+.nav-link.active{color:var(--accent-light);border-left-color:var(--accent);background:var(--accent-dim)}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.6;flex-shrink:0}
+.sidebar-footer{margin-top:auto;padding:1rem 1.25rem;border-top:1px solid var(--border);font-size:11px;color:var(--text3);line-height:1.5}
+
+/* MAIN */
+#main{flex:1;overflow-y:auto;max-width:860px}
+.hero{padding:3.5rem 3rem 2.5rem;border-bottom:1px solid var(--border)}
+.hero-label{font-family:var(--font-mono);font-size:11px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem}
+.hero h2{font-family:var(--font-display);font-size:2.6rem;font-weight:300;line-height:1.2;color:var(--text);margin-bottom:1rem}
+.hero h2 em{color:var(--accent-light);font-style:italic}
+.hero p{font-size:15px;color:var(--text2);max-width:540px;line-height:1.75}
+.hero-stats{display:flex;gap:2rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.hero-stat .num{font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--accent-light)}
+.hero-stat .lbl{font-size:11px;color:var(--text3);font-family:var(--font-mono);letter-spacing:.05em;margin-top:2px}
+
+/* SECTIONS */
+.section{padding:2.5rem 3rem;border-bottom:1px solid var(--border)}
+.section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem}
+.section-icon{width:40px;height:40px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;font-family:var(--font-mono)}
+.section-title-block{}
+.section-label{font-size:10px;font-family:var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:3px}
+.section-title{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--text);line-height:1.2}
+.section-lead{color:var(--text2);font-size:14px;max-width:600px;line-height:1.7;margin-bottom:1.5rem}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.1rem 1.25rem}
+.card-accent{border-left:3px solid var(--accent)}
+.card h4{font-size:13px;font-weight:500;color:var(--text);margin-bottom:.4rem}
+.card p{font-size:13px;color:var(--text2);line-height:1.6}
+.card .tag{display:inline-block;font-size:10px;font-family:var(--font-mono);padding:2px 7px;border-radius:4px;margin-bottom:.6rem;letter-spacing:.05em}
+.tag-amber{background:var(--accent-dim);color:var(--accent-light)}
+.tag-teal{background:var(--teal-dim);color:var(--teal)}
+.tag-blue{background:var(--blue-dim);color:var(--blue)}
+.tag-green{background:var(--green-dim);color:var(--green)}
+.tag-red{background:var(--red-dim);color:var(--red)}
+.tag-purple{background:var(--purple-dim);color:var(--purple)}
+
+/* RESEARCH CALLOUTS */
+.research{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.1rem 1.25rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start}
+.research-icon{font-size:18px;flex-shrink:0;margin-top:2px}
+.research-body{}
+.research-body strong{font-size:13px;color:var(--text);font-weight:500}
+.research-body p{font-size:13px;color:var(--text2);margin-top:3px;line-height:1.6}
+.research-source{font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-top:.4rem}
+
+/* ACCORDION */
+.accordion{border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;margin-bottom:1rem}
+.accordion-item{border-bottom:1px solid var(--border)}
+.accordion-item:last-child{border-bottom:none}
+.accordion-btn{width:100%;background:none;border:none;padding:.9rem 1.25rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;color:var(--text);font-family:var(--font);font-size:14px;font-weight:500;text-align:left;transition:background .15s}
+.accordion-btn:hover{background:var(--surface2)}
+.accordion-btn .chevron{transition:transform .25s;color:var(--text3);font-size:16px}
+.accordion-btn.open .chevron{transform:rotate(180deg)}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--surface2)}
+.accordion-content.open{max-height:800px}
+.accordion-inner{padding:.75rem 1.25rem 1rem;font-size:13px;color:var(--text2);line-height:1.7}
+.accordion-inner ul{padding-left:1.2rem;margin-top:.4rem}
+.accordion-inner li{margin-bottom:.3rem}
+.accordion-inner strong{color:var(--text);font-weight:500}
+
+/* PILL LIST */
+.pill-list{display:flex;flex-wrap:wrap;gap:.4rem;margin:.75rem 0}
+.pill{padding:.3rem .75rem;border-radius:20px;font-size:12px;font-family:var(--font-mono);border:1px solid var(--border2);color:var(--text2);background:var(--surface)}
+
+/* STEP LIST */
+.steps{counter-reset:step;margin:1rem 0}
+.step{display:flex;gap:1rem;margin-bottom:1rem;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--accent-dim);color:var(--accent-light);font-size:12px;font-weight:500;font-family:var(--font-mono);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-body{}
+.step-body strong{font-size:14px;color:var(--text);font-weight:500}
+.step-body p{font-size:13px;color:var(--text2);margin-top:3px;line-height:1.6}
+
+/* MATRIX */
+#matrix-wrap{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem;margin:1rem 0}
+.matrix-cell{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.1rem;min-height:110px}
+.matrix-cell h5{font-size:12px;font-family:var(--font-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem}
+.mc-do{border-top:3px solid var(--green)}
+.mc-do h5{color:var(--green)}
+.mc-schedule{border-top:3px solid var(--blue)}
+.mc-schedule h5{color:var(--blue)}
+.mc-delegate{border-top:3px solid var(--accent)}
+.mc-delegate h5{color:var(--accent)}
+.mc-eliminate{border-top:3px solid var(--red)}
+.mc-eliminate h5{color:var(--red)}
+.matrix-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-bottom:.3rem;padding:0 4px}
+.matrix-cell p{font-size:12px;color:var(--text2);line-height:1.55}
+.matrix-cell ul{font-size:12px;color:var(--text2);padding-left:1rem;line-height:1.8}
+.matrix-label{font-size:11px;color:var(--text3);font-family:var(--font-mono);text-align:center;writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);align-self:center;letter-spacing:.08em;display:flex;align-items:center;gap:4px}
+
+/* POMODORO TIMER */
+#pomo-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.5rem;display:flex;gap:2rem;align-items:center;margin:1.25rem 0;flex-wrap:wrap}
+#pomo-display{text-align:center}
+#pomo-time{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:var(--text);line-height:1}
+#pomo-label{font-size:11px;font-family:var(--font-mono);color:var(--text3);margin-top:.3rem;letter-spacing:.08em;text-transform:uppercase}
+#pomo-ring{position:relative;width:90px;height:90px;flex-shrink:0}
+#pomo-ring svg{transform:rotate(-90deg)}
+#pomo-prog{stroke-dasharray:251;stroke-dashoffset:0;transition:stroke-dashoffset .9s}
+#pomo-controls{display:flex;flex-direction:column;gap:.5rem;flex:1;min-width:180px}
+.pomo-btn{padding:.5rem 1rem;border-radius:var(--r);font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font);transition:all .15s;border:1px solid var(--border2);background:var(--surface2);color:var(--text)}
+.pomo-btn:hover{background:var(--border)}
+.pomo-btn.primary{background:var(--accent-dim);border-color:var(--accent);color:var(--accent-light)}
+.pomo-btn.primary:hover{background:var(--accent);color:var(--bg)}
+.pomo-info{flex:1;min-width:200px}
+.pomo-info p{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:.5rem}
+#pomo-session-count{font-family:var(--font-mono);font-size:11px;color:var(--text3)}
+
+/* TOOLS TABLE */
+.tools-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:13px}
+.tools-table th{text-align:left;padding:.6rem .8rem;font-size:11px;font-family:var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);font-weight:400}
+.tools-table td{padding:.7rem .8rem;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2)}
+.tools-table tr:last-child td{border-bottom:none}
+.tools-table tr:hover td{background:var(--surface2)}
+.tool-name{color:var(--text);font-weight:500}
+.tool-platform{display:flex;gap:.3rem;flex-wrap:wrap}
+.plat{font-size:10px;font-family:var(--font-mono);padding:1px 5px;border-radius:3px;background:var(--surface2);border:1px solid var(--border);color:var(--text3)}
+
+/* PROTOCOL CARD */
+.protocol{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:var(--r2);padding:1.25rem;margin-bottom:1rem}
+.protocol h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:.5rem}
+.protocol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin-top:.75rem}
+.protocol-item{background:var(--surface2);border-radius:var(--r);padding:.7rem;border:1px solid var(--border)}
+.protocol-item .pi-label{font-size:10px;font-family:var(--font-mono);color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.protocol-item .pi-val{font-size:13px;color:var(--text);font-weight:500}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:1.5rem;margin:1rem 0}
+.timeline::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--border2)}
+.tl-item{position:relative;margin-bottom:1.25rem}
+.tl-dot{position:absolute;left:-1.5rem;top:5px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);flex-shrink:0}
+.tl-time{font-size:11px;font-family:var(--font-mono);color:var(--accent);margin-bottom:2px}
+.tl-body{font-size:13px;color:var(--text2);line-height:1.6}
+.tl-body strong{color:var(--text);font-weight:500}
+
+/* HIGHLIGHT BLOCK */
+.highlight{background:var(--accent-dim);border:1px solid #3d2a0d;border-radius:var(--r2);padding:1rem 1.25rem;margin:1rem 0}
+.highlight p{font-size:13px;color:#d4922a;line-height:1.6}
+.highlight strong{color:var(--accent-light)}
+
+/* PRINCIPLE */
+.principle{display:flex;gap:1rem;margin-bottom:1rem;padding:1rem;background:var(--surface);border-radius:var(--r2);border:1px solid var(--border)}
+.principle-num{font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--border2);line-height:1;flex-shrink:0;width:32px;text-align:right}
+.principle-body{}
+.principle-body h4{font-size:14px;font-weight:500;color:var(--text);margin-bottom:.3rem}
+.principle-body p{font-size:13px;color:var(--text2);line-height:1.6}
+
+/* FLOW STATE CHART */
+.flow-chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.5rem;margin:1rem 0;position:relative}
+.flow-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:0;border:1px solid var(--border2);border-radius:var(--r);overflow:hidden}
+.flow-cell{padding:.8rem 1rem;min-height:80px;display:flex;flex-direction:column;justify-content:center}
+.flow-cell h5{font-size:12px;font-weight:500;margin-bottom:3px}
+.flow-cell p{font-size:11px;line-height:1.5}
+.fc-flow{background:#0a2220;border-right:1px solid var(--border2);border-bottom:1px solid var(--border2)}
+.fc-flow h5{color:var(--teal)}
+.fc-flow p{color:#4a8a82}
+.fc-arousal{background:#1a1230;border-bottom:1px solid var(--border2)}
+.fc-arousal h5{color:var(--purple)}
+.fc-arousal p{color:#6b5a9e}
+.fc-boredom{background:#111f0f;border-right:1px solid var(--border2)}
+.fc-boredom h5{color:var(--green)}
+.fc-boredom p{color:#3d6835}
+.fc-anxiety{background:#240f0e}
+.fc-anxiety h5{color:var(--red)}
+.fc-anxiety p{color:#8a3a37}
+.flow-label-x{display:flex;justify-content:space-between;margin-top:.5rem;font-size:10px;color:var(--text3);font-family:var(--font-mono);padding:0 4px}
+.flow-label-y-wrap{display:flex;gap:.5rem;margin-top:.5rem;align-items:center}
+.flow-label-y{font-size:10px;color:var(--text3);font-family:var(--font-mono)}
+
+/* BADGE */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:.2rem .6rem;border-radius:20px;font-size:11px;font-family:var(--font-mono)}
+.badge-green{background:var(--green-dim);color:var(--green)}
+.badge-amber{background:var(--accent-dim);color:var(--accent-light)}
+.badge-red{background:var(--red-dim);color:var(--red)}
+.badge-teal{background:var(--teal-dim);color:var(--teal)}
+.badge-blue{background:var(--blue-dim);color:var(--blue)}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
+
+/* MISC */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}#matrix-wrap{grid-template-columns:1fr;grid-template-rows:auto}}
+.metric-row{display:flex;gap:.75rem;margin:.75rem 0;flex-wrap:wrap}
+.metric{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.75rem 1rem;text-align:center;flex:1;min-width:100px}
+.metric .m-val{font-family:var(--font-display);font-size:1.8rem;font-weight:300;color:var(--accent-light);line-height:1}
+.metric .m-lbl{font-size:10px;color:var(--text3);font-family:var(--font-mono);margin-top:4px;line-height:1.4}
+a{color:var(--accent-light);text-decoration:none}
+a:hover{text-decoration:underline}
+ul.plain{list-style:none;padding:0}
+ul.plain li{padding:.3rem 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text2)}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:'→';color:var(--accent);margin-right:.5rem;font-size:11px}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <h1>Productivity<br>Mastery</h1>
+    <p>SCIENCE-BACKED GUIDE</p>
+  </div>
+
+  <span class="nav-section">Foundations</span>
+  <a class="nav-link active" href="#intro" onclick="setActive(this)"><span class="nav-dot"></span>Overview</a>
+  <a class="nav-link" href="#focus" onclick="setActive(this)"><span class="nav-dot"></span>Deep Focus Science</a>
+  <a class="nav-link" href="#energy" onclick="setActive(this)"><span class="nav-dot"></span>Energy Management</a>
+  <a class="nav-link" href="#cognitive" onclick="setActive(this)"><span class="nav-dot"></span>Cognitive Limits</a>
+
+  <span class="nav-section">Systems</span>
+  <a class="nav-link" href="#time" onclick="setActive(this)"><span class="nav-dot"></span>Time Methods</a>
+  <a class="nav-link" href="#priority" onclick="setActive(this)"><span class="nav-dot"></span>Prioritization</a>
+  <a class="nav-link" href="#gtd" onclick="setActive(this)"><span class="nav-dot"></span>GTD & Capture</a>
+  <a class="nav-link" href="#habits" onclick="setActive(this)"><span class="nav-dot"></span>Habit Science</a>
+
+  <span class="nav-section">Protocols</span>
+  <a class="nav-link" href="#routines" onclick="setActive(this)"><span class="nav-dot"></span>Daily Routines</a>
+  <a class="nav-link" href="#deep-work" onclick="setActive(this)"><span class="nav-dot"></span>Deep Work Protocol</a>
+  <a class="nav-link" href="#env" onclick="setActive(this)"><span class="nav-dot"></span>Environment Design</a>
+
+  <span class="nav-section">Tools & Pitfalls</span>
+  <a class="nav-link" href="#tools" onclick="setActive(this)"><span class="nav-dot"></span>Tools & Apps</a>
+  <a class="nav-link" href="#anti" onclick="setActive(this)"><span class="nav-dot"></span>Anti-Patterns</a>
+  <a class="nav-link" href="#sleep" onclick="setActive(this)"><span class="nav-dot"></span>Sleep & Performance</a>
+
+  <div class="sidebar-footer">
+    All strategies sourced from peer-reviewed research. No affiliate links.
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="main">
+
+<!-- HERO -->
+<div class="hero" id="intro">
+  <div class="hero-label">Chapter 0 — Overview</div>
+  <h2>The science of doing<br><em>less, better.</em></h2>
+  <p>A curated, research-backed compendium of productivity methods, cognitive science, prioritization frameworks, and actionable protocols. Distilled from neuroscience, organizational psychology, and behavioral science.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">12</div><div class="lbl">CORE SECTIONS</div></div>
+    <div class="hero-stat"><div class="num">50+</div><div class="lbl">RESEARCH FINDINGS</div></div>
+    <div class="hero-stat"><div class="num">30+</div><div class="lbl">ACTIONABLE PROTOCOLS</div></div>
+    <div class="hero-stat"><div class="num">40+</div><div class="lbl">TOOLS REVIEWED</div></div>
+  </div>
+</div>
+
+<!-- ─── SECTION 1: DEEP FOCUS SCIENCE ─── -->
+<section class="section" id="focus">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--teal-dim);color:var(--teal)">⟳</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 1</div>
+      <div class="section-title">Deep Focus & Flow State</div>
+    </div>
+  </div>
+  <p class="section-lead">Peak cognitive performance requires specific conditions. Understanding the neuroscience of focus lets you engineer it deliberately rather than waiting for it to happen.</p>
+
+  <div class="research">
+    <div class="research-icon">🧠</div>
+    <div class="research-body">
+      <strong>The 23-minute recovery cost</strong>
+      <p>After a single interruption, it takes on average 23 minutes and 15 seconds to return to the original task with full cognitive depth. Shallow check-ins (30 seconds) still cause 4–7 minutes of focus decay.</p>
+      <div class="research-source">Gloria Mark, UC Irvine · Journal of Experimental Psychology (2023)</div>
+    </div>
+  </div>
+
+  <div class="research">
+    <div class="research-icon">⚡</div>
+    <div class="research-body">
+      <strong>Ultradian performance peaks</strong>
+      <p>The brain cycles through 90–120 minute high-alertness phases followed by a 20-minute trough, driven by the Basic Rest-Activity Cycle (BRAC). Working with, not against, this rhythm can increase output quality by ~40%.</p>
+      <div class="research-source">Peretz Lavie, Technion · Nathaniel Kleitman's BRAC research</div>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Flow State Conditions (Csikszentmihalyi)</h4>
+
+  <div class="flow-chart">
+    <div style="font-size:12px;color:var(--text3);font-family:var(--font-mono);margin-bottom:.75rem;text-align:center">SKILL LEVEL  →</div>
+    <div class="flow-grid">
+      <div class="flow-cell fc-flow">
+        <h5>FLOW ✦</h5>
+        <p>High skill + High challenge. Peak performance zone. Time distortion, effortless concentration.</p>
+      </div>
+      <div class="flow-cell fc-arousal">
+        <h5>AROUSAL</h5>
+        <p>High challenge slightly exceeds skill. Engaged, focused. On the edge of flow.</p>
+      </div>
+      <div class="flow-cell fc-boredom">
+        <h5>BOREDOM</h5>
+        <p>High skill + Low challenge. Disengaged, distracted. Break tasks into harder sub-goals.</p>
+      </div>
+      <div class="flow-cell fc-anxiety">
+        <h5>ANXIETY</h5>
+        <p>Low skill + High challenge. Paralysis, procrastination. Reduce scope or build skill first.</p>
+      </div>
+    </div>
+    <div class="flow-label-x"><span>Low challenge</span><span>High challenge</span></div>
+    <div style="font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-top:4px">↑ SKILL LEVEL</div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Flow Triggers (Research-Validated)</h4>
+  <div class="card-grid">
+    <div class="card"><span class="tag tag-teal">INTERNAL</span><h4>Clear goals</h4><p>Unambiguous, specific objectives reduce cognitive overhead and let the prefrontal cortex disengage from planning into execution.</p></div>
+    <div class="card"><span class="tag tag-teal">INTERNAL</span><h4>Challenge-skill balance</h4><p>Tasks should sit at roughly 4% above current skill level — difficult enough for engagement, achievable enough to avoid panic.</p></div>
+    <div class="card"><span class="tag tag-amber">EXTERNAL</span><h4>Immediate feedback</h4><p>Real-time progress signals keep dopamine loops tight. Build checkpoints, progress bars, or test cycles into your workflow.</p></div>
+    <div class="card"><span class="tag tag-amber">EXTERNAL</span><h4>Deep embodiment</h4><p>Remove self-consciousness triggers: notifications, social media, open offices. Autonomic nervous system must feel safe to engage.</p></div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Neuroscience: what happens in the brain during focus</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Prefrontal cortex quiets (transient hypofrontality):</strong> The self-monitoring, planning regions partially deactivate — removing friction and self-doubt.</li>
+            <li><strong>Norepinephrine surges:</strong> Signal-to-noise ratio in neural circuits increases dramatically; irrelevant stimuli are filtered out.</li>
+            <li><strong>Dopamine flood:</strong> Pattern recognition accelerates; connections between disparate ideas form more easily.</li>
+            <li><strong>Anandamide release:</strong> An endocannabinoid that boosts lateral thinking and creative pattern matching.</li>
+            <li><strong>Serotonin effects:</strong> Creates the characteristic "flow feel" — sense of effortless control and satisfaction.</li>
+          </ul>
+          <p style="margin-top:.75rem">Getting into flow takes 15–30 minutes of uninterrupted work. Protecting the entry window is as important as the deep work itself.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>The attentional blink — why multitasking destroys quality</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>When the brain processes one item of information, it enters a 200–500ms "attentional blink" where it fails to register subsequent stimuli. Multitasking doesn't split attention — it rapidly serializes tasks with significant switching costs each time.</p>
+          <ul>
+            <li>IQ drops by ~10 points when working in a "multitasking" mode (equivalent to missing a night of sleep)</li>
+            <li>Error rates increase by 50% on complex tasks when switching contexts</li>
+            <li>Task-switching can cost 40% of productive time (American Psychological Association, 2006)</li>
+            <li>Heavy multitaskers are demonstrably <em>worse</em> at filtering irrelevant information (Ophir et al., Stanford, 2009)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 2: ENERGY MANAGEMENT ─── -->
+<section class="section" id="energy">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--accent-dim);color:var(--accent-light)">⚡</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 2</div>
+      <div class="section-title">Energy Management</div>
+    </div>
+  </div>
+  <p class="section-lead">Time is fixed. Energy is renewable. Managing your biological energy — cognitive, emotional, physical, spiritual — is the highest-leverage productivity intervention.</p>
+
+  <div class="metric-row">
+    <div class="metric"><div class="m-val">4</div><div class="m-lbl">Energy<br>Dimensions</div></div>
+    <div class="metric"><div class="m-val">90min</div><div class="m-lbl">Optimal<br>Work Block</div></div>
+    <div class="metric"><div class="m-val">20min</div><div class="m-lbl">Recovery<br>Break</div></div>
+    <div class="metric"><div class="m-val">3</div><div class="m-lbl">Peak blocks<br>per day</div></div>
+  </div>
+
+  <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+    <div class="card card-accent">
+      <span class="tag tag-amber">DIMENSION 1</span>
+      <h4>Physical Energy</h4>
+      <p>Foundation of all performance. Sleep 7–9h, exercise 150 min/week, eat for stable blood glucose. Without this, everything else breaks.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--teal)">
+      <span class="tag tag-teal">DIMENSION 2</span>
+      <h4>Emotional Energy</h4>
+      <p>Unmanaged negative emotions are "performance killers." Psychological safety, defined purpose, and controlled stress are key drivers.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--blue)">
+      <span class="tag tag-blue">DIMENSION 3</span>
+      <h4>Mental Energy</h4>
+      <p>Concentration, cognitive flexibility, optimistic thinking. Protect it via single-tasking, decision batching, and limiting information overload.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--purple)">
+      <span class="tag tag-purple">DIMENSION 4</span>
+      <h4>Spiritual Energy</h4>
+      <p>Clarity of values and purpose. When work aligns with purpose, engagement increases. Misalignment is chronically draining even in easy tasks.</p>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Chronotype-Based Scheduling</h4>
+
+  <div class="research">
+    <div class="research-icon">🕐</div>
+    <div class="research-body">
+      <strong>Work with your chronotype, not against it</strong>
+      <p>~25% of people are "Morning Lions," ~25% "Night Owls," ~50% intermediate. Scheduling cognitive work during your peak alertness window increases performance by 20–30% vs. off-peak equivalent tasks. There is no universal "best time" to work — chronobiology is individual.</p>
+      <div class="research-source">Michael Breus, PhD · Daniel Pink, "When" (2018)</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Identify your chronotype — the 3-task test</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>For one week, note when you feel most mentally sharp, most emotionally balanced, and most physically energized. Look for consistent peaks:</p>
+          <ul>
+            <li><strong>Morning Lion (Early):</strong> Peak 8–12am. Schedule deep work in the morning. Use afternoons for admin and collaboration.</li>
+            <li><strong>Night Owl (Late):</strong> Peak 6pm–midnight. Protect evening hours for deep work. Use mornings for low-stakes tasks.</li>
+            <li><strong>Third Bird (Middle):</strong> Peak 10am–2pm. Deep work mid-morning, trough post-lunch, moderate rebound late afternoon.</li>
+          </ul>
+          <p style="margin-top:.5rem">Identify your "afternoon trough" — typically 1–3 hours after peak. This is the best time for naps (10–20 min), walks, admin, or meetings. Never schedule hard creative work here.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Decision fatigue — protect your best cognitive resource</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Every decision draws from a finite pool of willpower and executive function (Baumeister et al., 1998). The brain's prefrontal cortex literally metabolizes glucose with each decision.</p>
+          <ul>
+            <li><strong>Reduce trivial decisions:</strong> Standardize meals, clothes, routes. Every removed micro-decision preserves capacity for high-stakes choices.</li>
+            <li><strong>Batch similar decisions:</strong> Group emails, meetings, and administrative tasks into dedicated windows. Context-switching between decision types is cognitively expensive.</li>
+            <li><strong>Make important decisions early:</strong> Judges grant parole at higher rates early in the day and after meals. Literally schedule high-stakes choices in morning peaks.</li>
+            <li><strong>Default behaviors:</strong> Pre-commit to routines that remove decisions. "When it's 9am, I work on deep work" removes the daily battle of when to start.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 3: COGNITIVE LIMITS ─── -->
+<section class="section" id="cognitive">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--purple-dim);color:var(--purple)">◈</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 3</div>
+      <div class="section-title">Cognitive Limits & Working Memory</div>
+    </div>
+  </div>
+  <p class="section-lead">The brain's constraints are not bugs — they're features. Designing your system around cognitive limits is more effective than trying to override them.</p>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag tag-purple">MILLER'S LAW</span><h4>7 ± 2 chunks in working memory</h4><p>Working memory holds 5–9 "chunks" at once. Beyond this, items are dropped. Systems, checklists, and notes are essential — not optional crutches.</p></div>
+    <div class="card"><span class="tag tag-purple">COGNITIVE LOAD</span><h4>Three types of load</h4><p><strong>Intrinsic:</strong> inherent task complexity. <strong>Extraneous:</strong> poor design/presentation. <strong>Germane:</strong> learning-building load. Only extraneous load should be minimized.</p></div>
+    <div class="card"><span class="tag tag-purple">EGO DEPLETION</span><h4>Willpower is a muscle</h4><p>Self-regulation draws from a shared resource that depletes with use. Top performers don't rely on willpower — they design environments where the default behavior is the correct one.</p></div>
+    <div class="card"><span class="tag tag-purple">ZEIGARNIK EFFECT</span><h4>Open loops drain energy</h4><p>Incomplete tasks create persistent "open loops" that occupy working memory unconsciously, causing rumination and mental fatigue. Capture everything into a trusted system.</p></div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>The core insight:</strong> Your brain is not a storage system — it's a processing system. Use external systems (notes, tasks, calendars) to store everything that doesn't need immediate processing. Free your working memory for the work itself.</p>
+  </div>
+
+  <div class="research">
+    <div class="research-icon">📊</div>
+    <div class="research-body">
+      <strong>Cognitive overhead of "to remember" items</strong>
+      <p>In a study by David Allen (GTD research), knowledge workers carried an average of 300+ "open loops" in their heads. Each uncaptured commitment draws ongoing background processing cycles, reducing available cognition by an estimated 20-30%.</p>
+      <div class="research-source">David Allen, "Getting Things Done" · Baumeister & Tierney, "Willpower" (2011)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 4: TIME MANAGEMENT METHODS ─── -->
+<section class="section" id="time">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--blue-dim);color:var(--blue)">⧗</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 4</div>
+      <div class="section-title">Time Management Systems</div>
+    </div>
+  </div>
+  <p class="section-lead">Each method optimizes for a different constraint. Choose based on your role, work type, and biggest failure mode.</p>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>🍅 Pomodoro Technique — best for focus & procrastination</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>Core protocol:</strong> 25 minutes work → 5 minute break × 4, then a 25-minute long break. Work only on one task per interval. Track completed "pomodoros."</p>
+          <ul>
+            <li><strong>Why it works:</strong> Timeboxing creates artificial urgency (Parkinson's Law). Breaks prevent fatigue accumulation. Intervals gamify output tracking.</li>
+            <li><strong>Modification — 90/20:</strong> For deep work specialists, 90-minute blocks with 20-minute BRAC-aligned breaks outperform the classic 25/5 split.</li>
+            <li><strong>Best for:</strong> Writers, coders, students, anyone prone to distraction or procrastination.</li>
+            <li><strong>Failure mode:</strong> Interrupting flow state mid-pomodoro is counterproductive. Use judgment — extend blocks when you're deeply in flow.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>📅 Time Blocking — best for managers and makers</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>Core protocol:</strong> Schedule every hour of the day in advance. Every task lives in a calendar block. No unscheduled time.</p>
+          <ul>
+            <li><strong>Maker vs Manager schedule:</strong> Cal Newport's key insight — "maker" work (writing, coding, designing) needs 4–6h continuous blocks. "Manager" work (meetings, reviews) works in 30–60min slots. Mixing them destroys both.</li>
+            <li><strong>Fixed-schedule productivity:</strong> Set a maximum work end-time first, then fit work into the window. Creates urgency and eliminates expansion.</li>
+            <li><strong>Buffer blocks:</strong> Add 20% buffer blocks daily to absorb unexpected tasks without breaking the system.</li>
+            <li><strong>Best for:</strong> Knowledge workers with control over their calendars. Executives, researchers, freelancers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>🐸 Eat the Frog — best for procrastinators</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>Core protocol:</strong> Begin each day by doing your most dreaded, highest-impact task first — before anything else, including email.</p>
+          <ul>
+            <li><strong>Science basis:</strong> Willpower and executive function are highest early in the day (especially for Lions). Completing a hard task early triggers a dopamine reward that improves mood and motivation for the rest of the day.</li>
+            <li><strong>The Twain Principle:</strong> Mark Twain: "If it's your job to eat a frog, it's best to do it first thing in the morning. And if it's your job to eat two frogs, it's best to eat the biggest one first."</li>
+            <li><strong>Hybrid use:</strong> Identify your frog the night before. Reduce decision overhead at the start of the day.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>📦 Batch Processing — best for reactive work</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>Core protocol:</strong> Group similar tasks (email, calls, admin) into dedicated time windows. Process them all at once rather than reacting throughout the day.</p>
+          <ul>
+            <li><strong>Email:</strong> Check at fixed times only (e.g., 9am, 1pm, 5pm). Turning off notifications saves an average of 1.5h/day in focus recovery time.</li>
+            <li><strong>Meetings:</strong> Cluster all meetings on 2–3 days to protect full maker days. "Meeting Tuesdays" and "Meeting Thursdays" are a common pattern.</li>
+            <li><strong>Administrative tasks:</strong> Expenses, paperwork, scheduling — batch into a weekly 1-hour "admin block."</li>
+            <li><strong>Context stacking:</strong> Batching exploits cognitive context — once your brain is "in email mode," each email costs less to process.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>⏱ Parkinson's Law — why constraints improve output</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>The law:</strong> "Work expands to fill the time available for its completion." — Cyril Northcote Parkinson, 1955.</p>
+          <ul>
+            <li><strong>Application:</strong> Set tighter deadlines than you think you need. A 2-hour task given 4 hours will take 4 hours.</li>
+            <li><strong>Research support:</strong> Studies show that artificial constraints (shorter deadlines, smaller word counts, constrained budgets) consistently improve both efficiency and often quality — by forcing prioritization.</li>
+            <li><strong>Practical use:</strong> Use a countdown timer for tasks. Tell yourself "this will take 45 minutes" even if you've allocated an hour. The constraint is motivating.</li>
+            <li><strong>The 40-70 rule:</strong> Colin Powell's decision heuristic — make decisions with 40–70% of ideal information. Waiting for 100% certainty is a productivity killer disguised as thoroughness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Interactive Pomodoro Timer</h4>
+
+  <div id="pomo-wrap">
+    <div id="pomo-ring">
+      <svg width="90" height="90" viewBox="0 0 90 90">
+        <circle cx="45" cy="45" r="40" fill="none" stroke="var(--border2)" stroke-width="4"/>
+        <circle id="pomo-prog" cx="45" cy="45" r="40" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--accent-light)" id="pomo-pct">100%</div>
+    </div>
+    <div id="pomo-display">
+      <div id="pomo-time">25:00</div>
+      <div id="pomo-label">FOCUS BLOCK</div>
+    </div>
+    <div id="pomo-controls">
+      <button class="pomo-btn primary" onclick="pomodoroToggle()" id="pomo-start-btn">▶ Start Focus</button>
+      <button class="pomo-btn" onclick="pomodoroReset()">↺ Reset</button>
+      <select id="pomo-mode" onchange="pomodoroMode()" style="padding:.45rem .75rem;background:var(--surface2);border:1px solid var(--border2);color:var(--text);border-radius:var(--r);font-size:13px;font-family:var(--font)">
+        <option value="25">25 min focus</option>
+        <option value="50">50 min focus</option>
+        <option value="90">90 min deep work</option>
+      </select>
+      <div id="pomo-session-count">Sessions today: 0</div>
+    </div>
+    <div class="pomo-info">
+      <p>Pomodoro technique uses timeboxed intervals to maintain focus and prevent mental fatigue. Track completed sessions to gamify your output.</p>
+      <p style="font-size:12px;color:var(--text3)">After 4 sessions → take a 25-minute break. Protect this timer from interruptions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 5: PRIORITIZATION ─── -->
+<section class="section" id="priority">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--green-dim);color:var(--green)">◎</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 5</div>
+      <div class="section-title">Prioritization Frameworks</div>
+    </div>
+  </div>
+  <p class="section-lead">Doing more is not the goal — doing the right things is. Every prioritization framework is a different lens for finding your highest-leverage work.</p>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:0 0 .75rem">Eisenhower Matrix</h4>
+
+  <div class="matrix-axis"><span>URGENT →</span><span>→ NOT URGENT</span></div>
+  <div id="matrix-wrap">
+    <div class="matrix-cell mc-do">
+      <h5>DO FIRST</h5>
+      <p>Urgent + Important</p>
+      <ul>
+        <li>Crises & deadlines</li>
+        <li>Critical problems</li>
+        <li>Time-sensitive opportunities</li>
+      </ul>
+    </div>
+    <div class="matrix-cell mc-schedule">
+      <h5>SCHEDULE</h5>
+      <p>Not Urgent + Important</p>
+      <ul>
+        <li>Deep work & strategy</li>
+        <li>Relationship building</li>
+        <li>Learning & prevention</li>
+      </ul>
+    </div>
+    <div class="matrix-cell mc-delegate">
+      <h5>DELEGATE</h5>
+      <p>Urgent + Not Important</p>
+      <ul>
+        <li>Interruptions</li>
+        <li>Some meetings & emails</li>
+        <li>Low-skill urgent tasks</li>
+      </ul>
+    </div>
+    <div class="matrix-cell mc-eliminate">
+      <h5>ELIMINATE</h5>
+      <p>Not Urgent + Not Important</p>
+      <ul>
+        <li>Busywork</li>
+        <li>Trivia & time wasters</li>
+        <li>Mindless scrolling</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Eisenhower's insight:</strong> Highly effective people spend the majority of their time in Quadrant II (Important, Not Urgent). This quadrant is perpetually crowded out by Quadrant I crises — which are themselves often caused by <em>neglecting</em> Quadrant II work. Schedule QII time aggressively.</p>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Pareto Principle (80/20 Rule)</h4>
+
+  <div class="research">
+    <div class="research-icon">📈</div>
+    <div class="research-body">
+      <strong>80% of results come from 20% of efforts</strong>
+      <p>Originally observed in wealth distribution by economist Vilfredo Pareto, this principle holds remarkably consistently across productivity: 20% of tasks drive 80% of outcomes. Identifying and protecting these tasks is the highest-leverage thing you can do.</p>
+      <div class="research-source">Vilfredo Pareto (1896) · Richard Koch, "The 80/20 Principle"</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>MoSCoW prioritization — for projects & sprints</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Must Have:</strong> Non-negotiable. Without this, the deliverable fails. Typically no more than 60% of scope.</li>
+            <li><strong>Should Have:</strong> Important but not critical. Include if time allows. ~20% of scope.</li>
+            <li><strong>Could Have:</strong> Nice to have. Include only if everything above is done. ~20% of scope.</li>
+            <li><strong>Won't Have (this time):</strong> Explicitly excluded from current scope. Prevents scope creep by documenting decisions.</li>
+          </ul>
+          <p style="margin-top:.5rem">Originally developed for DSDM (Dynamic Systems Development Method). Works well for software, content, and project management.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>RICE scoring — for feature/project prioritization</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p><strong>Score = (Reach × Impact × Confidence) ÷ Effort</strong></p>
+          <ul>
+            <li><strong>Reach:</strong> How many people/outcomes does this affect per quarter?</li>
+            <li><strong>Impact:</strong> Score 0.25 (minimal), 0.5 (low), 1 (medium), 2 (high), 3 (massive)</li>
+            <li><strong>Confidence:</strong> Your confidence in the above estimates (0–100%)</li>
+            <li><strong>Effort:</strong> Total person-months of work required</li>
+          </ul>
+          <p style="margin-top:.5rem">Developed by Intercom. Works well for product teams; adaptable to personal task lists by simplifying the scoring.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Warren Buffett's 25/5 Rule — ruthless focus</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Step 1: Write down your 25 most important goals.<br>Step 2: Circle the top 5.<br>Step 3: Everything not in your top 5 is now on your <strong>Avoid-At-All-Costs list</strong> — not a secondary list. These goals are dangerous precisely because they are compelling enough to occupy your time without being impactful enough to transform your results.</p>
+          <p style="margin-top:.5rem">The principle: without ruthless exclusion, good ideas crowd out great ones. The enemy of exceptional work is the abundance of good options.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 6: GTD & CAPTURE ─── -->
+<section class="section" id="gtd">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--accent-dim);color:var(--accent-light)">↯</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 6</div>
+      <div class="section-title">GTD & Capture Systems</div>
+    </div>
+  </div>
+  <p class="section-lead">Getting Things Done (David Allen) is one of the most rigorously researched personal productivity systems. Its core insight: your mind is for having ideas, not holding them.</p>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:0 0 1rem">The GTD Five-Step Workflow</h4>
+
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Capture</strong><p>Collect everything that has your attention into a trusted external system. Inbox, notepad, voice memo. Nothing lives in your head.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Clarify</strong><p>Process each item: Is it actionable? If yes — what's the next physical action? If no — trash it, reference it, or incubate it (someday/maybe).</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Organize</strong><p>Put it where it belongs: next actions list, projects list, waiting-for list, calendar, or reference system. Not on your mental to-do list.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Reflect</strong><p>Weekly review: clear inboxes, update lists, review projects, preview upcoming weeks. Without this, the system degrades into noise within weeks.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Engage</strong><p>Choose what to do based on context (where you are), time available, energy level, and priority. The system presents options — you decide.</p></div></div>
+  </div>
+
+  <div class="research">
+    <div class="research-icon">🔬</div>
+    <div class="research-body">
+      <strong>GTD reduces anxiety and improves working memory</strong>
+      <p>A 2011 Florida State University study found that simply writing down a plan to accomplish an unfinished task — not completing the task itself — was enough to close the "open loop" and free up working memory. The act of capture is cognitively equivalent to completion, neurologically.</p>
+      <div class="research-source">Masicampo & Baumeister, FSU (2011) · Psychological Science</div>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">The Two-Minute Rule</h4>
+  <div class="card card-accent" style="margin-bottom:1rem">
+    <h4>If it takes less than 2 minutes — do it now</h4>
+    <p>One of the most actionable heuristics in productivity research. The overhead of capturing, organizing, and revisiting a 90-second task exceeds the cost of simply doing it immediately. Applied consistently, it prevents massive accumulation of trivial blockers.</p>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Next Physical Action Principle</h4>
+  <div class="card" style="border-left:3px solid var(--blue);margin-bottom:1rem">
+    <h4>Every project needs a defined next physical action</h4>
+    <p>Vague tasks ("work on presentation") don't get done. Concrete next actions ("open PowerPoint, draft slide 3 headline") create a clear starting point that bypasses procrastination. The brain can see the path forward and begins executing automatically.</p>
+  </div>
+</section>
+
+<!-- ─── SECTION 7: HABIT SCIENCE ─── -->
+<section class="section" id="habits">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--teal-dim);color:var(--teal)">∞</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 7</div>
+      <div class="section-title">Habit Science & Behavior Design</div>
+    </div>
+  </div>
+  <p class="section-lead">40–45% of daily behaviors are habits — automatic responses triggered by context. Designing your habits deliberately is the highest-leverage long-term productivity investment.</p>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag tag-teal">LOOP</span><h4>The Habit Loop</h4><p><strong>Cue → Craving → Response → Reward.</strong> All habits follow this structure (Duhigg, 2012; James Clear, 2018). Change any element to disrupt or build a habit.</p></div>
+    <div class="card"><span class="tag tag-teal">SCIENCE</span><h4>Habit formation timeline</h4><p>The popular "21 days" myth is inaccurate. Phillips et al. (UCL, 2010) found habits form in 18–254 days, with a median of 66 days. Complex behaviors take longer.</p></div>
+    <div class="card"><span class="tag tag-teal">STRATEGY</span><h4>Implementation intentions</h4><p>"When X happens, I will do Y." Stating the specific cue doubles habit formation success rates vs. just stating the goal (Gollwitzer, 1999).</p></div>
+    <div class="card"><span class="tag tag-teal">STRATEGY</span><h4>Temptation bundling</h4><p>Pair a task you "should" do with something you genuinely enjoy (e.g., podcast + gym). Reduces the psychological cost of initiating difficult habits. (Milkman, 2021)</p></div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">James Clear's Four Laws of Behavior Change</h4>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Law 1: Make it Obvious (Cue)</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Habit stacking:</strong> "After [current habit], I will [new habit]." Attaches new behaviors to existing cues.</li>
+            <li><strong>Environment design:</strong> Put visual cues for good habits in plain sight. Put cues for bad habits out of sight.</li>
+            <li><strong>Implementation intentions:</strong> Specify time AND location. "At 8am in my home office, I will write for 30 minutes."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Law 2: Make it Attractive (Craving)</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Temptation bundling:</strong> Link an action you want to do with an action you need to do.</li>
+            <li><strong>Social environment:</strong> Join groups where the desired behavior is the norm. "You are the average of the five people you spend the most time with."</li>
+            <li><strong>Reframe mindset:</strong> Replace "I have to do X" with "I get to do X." Shifts locus of control and intrinsic motivation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Law 3: Make it Easy (Response)</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Reduce friction:</strong> Each additional step required reduces habit compliance by ~10-15%. Lay out clothes the night before. Keep journal on the desk.</li>
+            <li><strong>Two-minute rule (habits):</strong> Scale any habit down to a 2-minute version to get started. "Read before bed" → "Open book." Starting is the hardest part.</li>
+            <li><strong>Commitment devices:</strong> Pre-commit future behavior to reduce in-the-moment willpower requirement. Delete apps, use website blockers, set up automatic savings.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Law 4: Make it Satisfying (Reward)</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Immediate rewards:</strong> The brain prioritizes immediate over delayed rewards. Build in immediate positive feedback for any habit with delayed natural rewards.</li>
+            <li><strong>Habit tracking:</strong> Don't break the chain (Jerry Seinfeld). Visual tracking creates its own reward. Never miss twice — one miss is an accident, two is a new habit.</li>
+            <li><strong>Reinforcement, not punishment:</strong> Punishment-based systems work short-term but create aversion. Reward-based systems compound.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 8: DAILY ROUTINES ─── -->
+<section class="section" id="routines">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--accent-dim);color:var(--accent)">◷</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 8</div>
+      <div class="section-title">Evidence-Based Daily Routines</div>
+    </div>
+  </div>
+  <p class="section-lead">The first and last 90 minutes of the day have outsized impact on performance. Structure them deliberately.</p>
+
+  <div class="two-col">
+    <div>
+      <h4 style="font-size:13px;color:var(--accent-light);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem">Morning Protocol (AM)</h4>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">0:00</div><div class="tl-body"><strong>Wake + No phone</strong><p>First 30 minutes: no phone, no email. Cortisol naturally peaks 30–45 min after waking (cortisol awakening response) — leverage this alertness before it drops.</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">+10min</div><div class="tl-body"><strong>Sunlight exposure</strong><p>10–30 minutes of sunlight sets your circadian clock, boosts serotonin, and improves sleep quality 12–16 hours later. (Huberman, 2021)</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">+30min</div><div class="tl-body"><strong>Movement</strong><p>Even 10 minutes of aerobic exercise increases BDNF, dopamine, and serotonin — improving cognitive function for 1–3 hours afterward.</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">+60min</div><div class="tl-body"><strong>Delay caffeine</strong><p>Wait 90–120 minutes before caffeine. Adenosine clears naturally in this window. Early caffeine blocks this process and causes a harder afternoon crash.</p></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">+90min</div><div class="tl-body"><strong>Daily planning (MIT method)</strong><p>Identify 1–3 Most Important Tasks for the day. Write them on paper. These are non-negotiable before any reactive work.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size:13px;color:var(--teal);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem">Evening Protocol (PM)</h4>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot" style="border-color:var(--teal)"></div><div class="tl-time" style="color:var(--teal)">-3h sleep</div><div class="tl-body"><strong>Dim lights</strong><p>Bright light after sunset suppresses melatonin by up to 50% for several hours. Dim overhead lights, use warm lamps or blue-light blocking glasses.</p></div></div>
+        <div class="tl-item"><div class="tl-dot" style="border-color:var(--teal)"></div><div class="tl-time" style="color:var(--teal)">-2h sleep</div><div class="tl-body"><strong>No hard exercise</strong><p>Intense exercise raises core temperature and cortisol — both inhibit sleep onset. Light yoga or walking is fine.</p></div></div>
+        <div class="tl-item"><div class="tl-dot" style="border-color:var(--teal)"></div><div class="tl-time" style="color:var(--teal)">-1h sleep</div><div class="tl-body"><strong>Shutdown ritual</strong><p>Cal Newport's "shutdown complete" signal — review tasks, write tomorrow's MITs, close all tabs. Tells the brain the workday is truly over, reducing rumination.</p></div></div>
+        <div class="tl-item"><div class="tl-dot" style="border-color:var(--teal)"></div><div class="tl-time" style="color:var(--teal)">-30min</div><div class="tl-body"><strong>No screens</strong><p>Phones emit short-wavelength (blue) light that suppresses melatonin and delays sleep onset by an average of 1.5 hours. Replace with reading (physical book).</p></div></div>
+        <div class="tl-item"><div class="tl-dot" style="border-color:var(--teal)"></div><div class="tl-time" style="color:var(--teal)">Bedtime</div><div class="tl-body"><strong>Cool environment</strong><p>Core body temperature must drop 2–3°F to initiate sleep. Set room to 65–68°F (18–20°C). Cold shower 30 min before bed accelerates the drop.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 9: DEEP WORK PROTOCOL ─── -->
+<section class="section" id="deep-work">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--blue-dim);color:var(--blue)">⬛</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 9</div>
+      <div class="section-title">Deep Work Protocol</div>
+    </div>
+  </div>
+  <p class="section-lead">Cal Newport's "Deep Work" defines cognitively demanding tasks performed in a state of distraction-free concentration that push your capabilities to the limit. It is increasingly rare and increasingly valuable.</p>
+
+  <div class="research">
+    <div class="research-icon">📉</div>
+    <div class="research-body">
+      <strong>Deep work capacity is declining at exactly the moment its value is rising</strong>
+      <p>The rise of "always-on" communication culture, open offices, and smartphone use has dramatically reduced the ability of knowledge workers to sustain focused attention. Those who cultivate it become disproportionately valuable.</p>
+      <div class="research-source">Cal Newport, "Deep Work" (2016) · McKinsey Global Institute workplace research</div>
+    </div>
+  </div>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">The Four Deep Work Philosophies</h4>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag tag-blue">MONASTIC</span><h4>Complete isolation</h4><p>Eliminate all shallow obligations. Live and breathe one project. For: novelists, researchers. Examples: Donald Knuth, Neal Stephenson.</p></div>
+    <div class="card"><span class="tag tag-blue">BIMODAL</span><h4>Split time periods</h4><p>Divide time into clearly defined "deep" and "shallow" periods — days, weeks, or seasons. Minimum 1 full day of deep work at a stretch.</p></div>
+    <div class="card"><span class="tag tag-blue">RHYTHMIC</span><h4>Daily deep blocks</h4><p>Schedule fixed deep work blocks at the same time every day. Lower activation energy. Best for most professionals: 2–4h each morning.</p></div>
+    <div class="card"><span class="tag tag-blue">JOURNALISTIC</span><h4>Flexible insertion</h4><p>Drop into deep work whenever a window appears. Requires trained ability to switch modes quickly. For experienced practitioners only.</p></div>
+  </div>
+
+  <div class="protocol">
+    <h4>Evidence-Based Deep Work Session Protocol</h4>
+    <p style="font-size:13px;color:var(--text2)">Follow this sequence for every deep work session to maximize output quality and sustainability.</p>
+    <div class="protocol-grid">
+      <div class="protocol-item"><div class="pi-label">Pre-session</div><div class="pi-val">5 min review: goals, context, last session's output</div></div>
+      <div class="protocol-item"><div class="pi-label">Duration</div><div class="pi-val">90–120 min (BRAC-aligned)</div></div>
+      <div class="protocol-item"><div class="pi-label">Inputs blocked</div><div class="pi-val">Phone off, notifications disabled, door closed</div></div>
+      <div class="protocol-item"><div class="pi-label">Single task</div><div class="pi-val">One defined outcome only</div></div>
+      <div class="protocol-item"><div class="pi-label">Post-session</div><div class="pi-val">5 min capture: what was achieved, what's next</div></div>
+      <div class="protocol-item"><div class="pi-label">Recovery</div><div class="pi-val">20 min real break (no screens)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 10: ENVIRONMENT DESIGN ─── -->
+<section class="section" id="env">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--green-dim);color:var(--green)">⬡</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 10</div>
+      <div class="section-title">Environment Design</div>
+    </div>
+  </div>
+  <p class="section-lead">Willpower is finite. Environment design makes the right behavior the path of least resistance — and the wrong behavior requires effort.</p>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag tag-green">DIGITAL</span><h4>Distraction blocking</h4><p>Tools like Cold Turkey, Freedom, and Screen Time can block distracting sites during deep work periods. The friction of overriding the block provides a decision pause.</p></div>
+    <div class="card"><span class="tag tag-green">DIGITAL</span><h4>Notification audit</h4><p>Turn off ALL notifications except direct calls. Research shows just having a phone visible (even face-down, silent) reduces available cognitive capacity measurably.</p></div>
+    <div class="card"><span class="tag tag-green">PHYSICAL</span><h4>Dedicated work spaces</h4><p>Specific locations train your brain to enter work mode via conditioned associative learning. Maintain one physical space used only for focused work.</p></div>
+    <div class="card"><span class="tag tag-green">PHYSICAL</span><h4>Optimal ambient conditions</h4><p>Temperature 68–72°F. CO₂ levels below 1000ppm (open window). Light levels 500–1000 lux. Moderate ambient noise (~65dB) can enhance creative output (Mehta et al., 2012).</p></div>
+    <div class="card"><span class="tag tag-green">SOCIAL</span><h4>Availability signals</h4><p>Establish and communicate focus hours. The "Do Not Disturb" norm reduces interruptions by ~70% when consistently enforced and communicated to collaborators.</p></div>
+    <div class="card"><span class="tag tag-green">SOCIAL</span><h4>Response latency norms</h4><p>Set explicit email/message response expectations (e.g., "I respond to emails within 24h"). This removes the implicit pressure for immediate replies that fragments focus.</p></div>
+  </div>
+
+  <div class="research">
+    <div class="research-icon">📱</div>
+    <div class="research-body">
+      <strong>The mere presence of a smartphone reduces intelligence</strong>
+      <p>Ward et al. (UT Austin, 2017) found that participants with phones in another room significantly outperformed those with phones face-down on the desk on tests of available cognitive capacity — even when the phone was on silent. Proximity alone is the variable.</p>
+      <div class="research-source">Adrian Ward et al., University of Texas at Austin · Journal of the Association for Consumer Research (2017)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 11: TOOLS & APPS ─── -->
+<section class="section" id="tools">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--purple-dim);color:var(--purple)">⬟</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 11</div>
+      <div class="section-title">Tools & Apps</div>
+    </div>
+  </div>
+  <p class="section-lead">The best tool is the one you'll actually use consistently. Tools should serve your system — not become a system in themselves. Avoid "productivity app hopping."</p>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:.5rem 0 .75rem">Task Management</h4>
+  <table class="tools-table">
+    <thead><tr><th>Tool</th><th>Best For</th><th>Method</th><th>Platform</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tool-name">Todoist</span></td><td>GTD, recurring tasks, teams</td><td>GTD, priority levels</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">iOS</span><span class="plat">Android</span></div></td></tr>
+      <tr><td><span class="tool-name">Things 3</span></td><td>Apple ecosystem, aesthetics</td><td>GTD, Areas of Focus</td><td><div class="tool-platform"><span class="plat">macOS</span><span class="plat">iOS</span></div></td></tr>
+      <tr><td><span class="tool-name">Notion</span></td><td>Projects + notes combined</td><td>Custom / databases</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">iOS</span><span class="plat">Android</span></div></td></tr>
+      <tr><td><span class="tool-name">Linear</span></td><td>Software engineering teams</td><td>Agile / sprints</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">macOS</span></div></td></tr>
+      <tr><td><span class="tool-name">Obsidian</span></td><td>Knowledge management, notes</td><td>Zettelkasten, PKM</td><td><div class="tool-platform"><span class="plat">All</span></div></td></tr>
+    </tbody>
+  </table>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Focus & Distraction Blocking</h4>
+  <table class="tools-table">
+    <thead><tr><th>Tool</th><th>Best For</th><th>Notes</th><th>Platform</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tool-name">Cold Turkey</span></td><td>Hardcore blocking</td><td>Cannot be overridden without reinstalling OS</td><td><div class="tool-platform"><span class="plat">Win</span><span class="plat">macOS</span></div></td></tr>
+      <tr><td><span class="tool-name">Freedom</span></td><td>Cross-device sync</td><td>Block across all devices simultaneously</td><td><div class="tool-platform"><span class="plat">All</span></div></td></tr>
+      <tr><td><span class="tool-name">Opal</span></td><td>iPhone users</td><td>Screen time with real friction</td><td><div class="tool-platform"><span class="plat">iOS</span></div></td></tr>
+      <tr><td><span class="tool-name">Brain.fm</span></td><td>Background focus audio</td><td>Functional music with neural phase-locking</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">iOS</span></div></td></tr>
+      <tr><td><span class="tool-name">Focusmate</span></td><td>Body-doubling</td><td>Virtual co-working with accountability partner</td><td><div class="tool-platform"><span class="plat">Web</span></div></td></tr>
+    </tbody>
+  </table>
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:1.25rem 0 .75rem">Time Tracking & Review</h4>
+  <table class="tools-table">
+    <thead><tr><th>Tool</th><th>Best For</th><th>Notes</th><th>Platform</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tool-name">Toggl Track</span></td><td>Time logging</td><td>Lightweight, reports, integrations</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">iOS</span><span class="plat">Android</span></div></td></tr>
+      <tr><td><span class="tool-name">RescueTime</span></td><td>Automatic tracking</td><td>Passive background tracking with weekly reports</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">macOS</span><span class="plat">Win</span></div></td></tr>
+      <tr><td><span class="tool-name">Sunsama</span></td><td>Daily planning ritual</td><td>Combines calendar + tasks + time tracking</td><td><div class="tool-platform"><span class="plat">Web</span><span class="plat">iOS</span></div></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─── SECTION 12: ANTI-PATTERNS ─── -->
+<section class="section" id="anti">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--red-dim);color:var(--red)">✕</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 12</div>
+      <div class="section-title">Anti-Patterns & Cognitive Traps</div>
+    </div>
+  </div>
+  <p class="section-lead">Most productivity failures aren't from lack of knowledge — they're from well-documented cognitive biases and behavioral traps. Recognizing them is the first line of defense.</p>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Productivity Porn — optimizing instead of producing</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Consuming productivity content, testing new apps, and tweaking your system feels like productive work — but is a form of avoidance. The dopamine hit of "planning to be productive" is cognitively similar to actually being productive, which makes it highly reinforcing and hard to detect.</p>
+          <p><strong>Fix:</strong> Schedule system maintenance to a weekly 30-minute slot. All other time goes to output, not optimization.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Planning fallacy — chronically underestimating time</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Kahneman & Tversky (1979): People systematically underestimate how long tasks will take while overestimating outcomes. This is universal and largely immune to awareness alone.</p>
+          <p><strong>Fixes:</strong></p>
+          <ul>
+            <li><strong>Reference class forecasting:</strong> How long did similar past tasks take? Use that, not your optimistic projection.</li>
+            <li><strong>Multiply by π:</strong> A rough heuristic — multiply your initial estimate by 3.14. Consistently more accurate for complex tasks.</li>
+            <li><strong>Add buffer blocks:</strong> Schedule 20–30% of each day as unallocated buffer. Real-world tasks reliably expand.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Perfectionism — the enemy of done</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Perfectionism is often anxiety disguised as high standards. Research consistently shows that perfectionism correlates with procrastination — avoiding starting rather than striving for excellence.</p>
+          <ul>
+            <li><strong>The 70% rule:</strong> Jeff Bezos' principle — make most decisions with ~70% of desired information. Waiting for certainty costs more than acting with imperfect information.</li>
+            <li><strong>Version thinking:</strong> Ship v1.0, then iterate. Software, writing, ideas — nothing is permanent. Perfectionism assumes final versions.</li>
+            <li><strong>Good enough is good:</strong> Voltaire's "perfect is the enemy of good" has empirical support. Satisficers (those who seek "good enough") consistently report higher life satisfaction than maximizers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Sunk cost fallacy — doing it because you started it</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Continuing a task, project, or strategy because of time/money already invested — rather than its future value. A major source of wasted time in both personal and organizational productivity.</p>
+          <ul>
+            <li><strong>Test:</strong> "If I were deciding whether to start this today, would I?" If no — stop.</li>
+            <li><strong>Failure portfolios:</strong> Track killed projects positively. The ability to stop things that aren't working is a high-leverage skill.</li>
+            <li><strong>Kill criteria:</strong> Define in advance the conditions under which a project will be terminated. Removes the in-the-moment emotional cost of stopping.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Busyness theater — activity vs. achievement</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <p>Busyness is often a social performance — signaling effort and commitment rather than generating outcomes. Email, meetings, and appearing "always on" are the primary vehicles.</p>
+          <ul>
+            <li><strong>Measure outputs, not inputs:</strong> Track what you shipped, built, or decided — not hours worked or emails sent.</li>
+            <li><strong>Meeting audit:</strong> For every recurring meeting, ask: "What decision or output does this produce?" If none — cancel it.</li>
+            <li><strong>The 4-hour rule:</strong> Could you produce the same outcomes in 4 focused hours as in 8 scattered hours? Almost always yes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 13: SLEEP & PERFORMANCE ─── -->
+<section class="section" id="sleep">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--teal-dim);color:var(--teal)">◑</div>
+    <div class="section-title-block">
+      <div class="section-label">Chapter 13</div>
+      <div class="section-title">Sleep, Exercise & Cognitive Performance</div>
+    </div>
+  </div>
+  <p class="section-lead">No productivity system overcomes biological neglect. Sleep, movement, and nutrition are not inputs to health — they're inputs to cognitive output.</p>
+
+  <div class="metric-row">
+    <div class="metric"><div class="m-val">2×</div><div class="m-lbl">Error rate at<br>6h vs 8h sleep</div></div>
+    <div class="metric"><div class="m-val">40%</div><div class="m-lbl">Memory consolidation<br>gain from NREM sleep</div></div>
+    <div class="metric"><div class="m-val">20%</div><div class="m-lbl">Cognitive boost<br>from 150min/wk exercise</div></div>
+    <div class="metric"><div class="m-val">26%</div><div class="m-lbl">IQ loss from<br>mild dehydration</div></div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Sleep — the highest ROI productivity intervention</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Memory consolidation:</strong> During NREM sleep, the hippocampus "replays" and transfers short-term memories to cortical long-term storage. Cutting sleep short truncates this process.</li>
+            <li><strong>Glymphatic cleaning:</strong> Cerebrospinal fluid flushes neurotoxic waste products (including amyloid-beta) during deep sleep. Chronic sleep deprivation increases dementia risk.</li>
+            <li><strong>6h vs 8h performance:</strong> After 2 weeks at 6h/night, cognitive impairment equals 24h total sleep deprivation — but subjects report feeling fine. Self-assessment is deeply unreliable.</li>
+            <li><strong>Optimal window:</strong> 7–9 hours in a consistent timing window. Consistency of sleep/wake timing may matter more than duration (Walker, 2017).</li>
+            <li><strong>Napping:</strong> 10–20 minute naps in the early afternoon (aligned with post-lunch trough) improve afternoon alertness by 34% and cognitive performance by 16% (NASA studies).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Exercise — BDNF, neuroplasticity, and focus</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>BDNF (Brain-Derived Neurotrophic Factor):</strong> Aerobic exercise triggers BDNF release — described by John Ratey as "Miracle-Gro for the brain." Enhances learning, memory, and mood.</li>
+            <li><strong>Hippocampal neurogenesis:</strong> Regular aerobic exercise is one of the few interventions that demonstrably grows new neurons in the adult brain, specifically in memory-relevant areas.</li>
+            <li><strong>Timing for cognitive benefit:</strong> Morning exercise maximizes the cognitive benefit window for morning/afternoon work. The BDNF peak lasts 1–3 hours post-exercise.</li>
+            <li><strong>Minimum effective dose:</strong> 150 min/week moderate aerobic exercise. Even 10-minute walks after meals improve post-meal glucose regulation and afternoon alertness.</li>
+            <li><strong>Strength training:</strong> 2–3 sessions/week resistance training independently improves executive function and reduces cortisol reactivity — complementary to aerobic benefits.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span>Nutrition — blood glucose stability and cognitive function</span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <ul>
+            <li><strong>Blood glucose stability:</strong> The brain runs on glucose — but <em>spikes and crashes</em> degrade cognitive function more than baseline level. High-glycemic meals cause post-meal cognitive crashes.</li>
+            <li><strong>Protein at breakfast:</strong> Protein-rich breakfasts reduce the cortisol awakening spike, improve sustained attention, and reduce afternoon energy crashes.</li>
+            <li><strong>Caffeine:</strong> Adenosine antagonist. Optimal use: 90mg–200mg after adenosine clearance (90min after waking). Half-life of ~5-7 hours — afternoon coffee disrupts sleep even if you fall asleep normally.</li>
+            <li><strong>Hydration:</strong> Even 1-2% dehydration measurably reduces cognitive performance, mood, and working memory. 2–3L water/day; more with exercise.</li>
+            <li><strong>Omega-3s:</strong> EPA/DHA support membrane fluidity in neural cells. Consistent supplementation (1–3g/day EPA+DHA) linked to improved executive function in meta-analyses.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>The compound effect of biological optimization:</strong> Sleep, exercise, and nutrition interact multiplicatively, not additively. Poor sleep impairs the benefit of exercise. Poor nutrition degrades sleep quality. Addressing all three simultaneously creates synergistic cognitive gains far larger than any single intervention.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h4 style="font-size:13px;color:var(--text2);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin:0 0 1rem">Key Principles — Summary</h4>
+
+  <div class="steps">
+    <div class="step"><div class="step-num">①</div><div class="step-body"><strong>Capture everything, hold nothing in your head.</strong><p>External systems are not a crutch — they're the foundation of cognitive clarity. Zero open loops in working memory.</p></div></div>
+    <div class="step"><div class="step-num">②</div><div class="step-body"><strong>Protect time for deep work above all else.</strong><p>Shallow work is infinitely expandable. Deep work capacity is scarce. Default to protecting it, not defending shallow work.</p></div></div>
+    <div class="step"><div class="step-num">③</div><div class="step-body"><strong>Design your environment, don't rely on willpower.</strong><p>Willpower is a depletable resource. Architecture your defaults so the right behavior requires no active choice.</p></div></div>
+    <div class="step"><div class="step-num">④</div><div class="step-body"><strong>Manage energy, not just time.</strong><p>A tired, depleted 8 hours produces less than a focused, high-energy 4. Optimizing energy is the multiplier on time management.</p></div></div>
+    <div class="step"><div class="step-num">⑤</div><div class="step-body"><strong>Do less, better.</strong><p>Ruthless prioritization outperforms heroic effort every time. The 20% of work driving 80% of impact deserves 80% of your best cognitive resources.</p></div></div>
+  </div>
+
+  <div style="margin-top:2rem;padding:1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);text-align:center">
+    <p style="font-family:var(--font-display);font-size:1.3rem;font-weight:300;color:var(--text);font-style:italic;line-height:1.4;">"It's not about doing more things — it's about doing the right things with full attention."</p>
+    <p style="font-size:12px;color:var(--text3);font-family:var(--font-mono);margin-top:.5rem">— Cal Newport, Deep Work</p>
+  </div>
+
+</section>
+
+</main>
+
+<script>
+function setActive(el){
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function toggleAccordion(btn){
+  const content=btn.nextElementSibling;
+  const isOpen=content.classList.contains('open');
+  btn.classList.toggle('open',!isOpen);
+  content.classList.toggle('open',!isOpen);
+}
+
+// Pomodoro
+let pomoTimer=null, pomoSeconds=25*60, pomoTotal=25*60, pomoRunning=false, pomoSessions=0;
+function updatePomoDisplay(){
+  const m=Math.floor(pomoSeconds/60), s=pomoSeconds%60;
+  document.getElementById('pomo-time').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  const pct=Math.round((pomoSeconds/pomoTotal)*100);
+  const offset=251-(251*(1-(pomoSeconds/pomoTotal)));
+  document.getElementById('pomo-prog').style.strokeDashoffset=offset;
+  document.getElementById('pomo-pct').textContent=pct+'%';
+}
+function pomodoroToggle(){
+  if(pomoRunning){
+    clearInterval(pomoTimer);pomoRunning=false;
+    document.getElementById('pomo-start-btn').textContent='▶ Resume Focus';
+  } else {
+    pomoRunning=true;
+    document.getElementById('pomo-start-btn').textContent='⏸ Pause';
+    pomoTimer=setInterval(()=>{
+      if(pomoSeconds>0){pomoSeconds--;updatePomoDisplay();}
+      else{
+        clearInterval(pomoTimer);pomoRunning=false;pomoSessions++;
+        document.getElementById('pomo-session-count').textContent='Sessions today: '+pomoSessions;
+        document.getElementById('pomo-start-btn').textContent='▶ Start Focus';
+        document.getElementById('pomo-label').textContent='BREAK TIME ✓';
+        document.getElementById('pomo-time').style.color='var(--teal)';
+      }
+    },1000);
+  }
+}
+function pomodoroReset(){
+  clearInterval(pomoTimer);pomoRunning=false;
+  const sel=document.getElementById('pomo-mode');
+  pomoTotal=parseInt(sel.value)*60;pomoSeconds=pomoTotal;
+  document.getElementById('pomo-start-btn').textContent='▶ Start Focus';
+  document.getElementById('pomo-label').textContent='FOCUS BLOCK';
+  document.getElementById('pomo-time').style.color='var(--text)';
+  updatePomoDisplay();
+}
+function pomodoroMode(){pomodoroReset();}
+updatePomoDisplay();
+
+// Scroll spy
+const sections=document.querySelectorAll('section[id], div[id="intro"]');
+const links=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      links.forEach(l=>{
+        l.classList.toggle('active',l.getAttribute('href')==='#'+id);
+      });
+    }
+  });
+},{threshold:0.3});
+sections.forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>
